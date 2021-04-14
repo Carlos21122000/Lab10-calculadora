@@ -1,3 +1,8 @@
+/**
+/*Patel, N. (2018, July 2). How To Build A Simple Calculator Application With React.JS. Medium. https://medium.com/@nitinpatel_20236/how-to-build-a-simple-calculator-application-with-react-js-bc10a4568bbd
+/*Georgi Georgiev (29 enero) Howt to create a simple calculator web app using react.js  https://dev.to/gjorgiev/how-to-create-a-simple-calculator-web-app-using-react-js-4gc3
+*/
+
 
 import React, {Component} from "react";
 import "./App.css";
@@ -9,7 +14,6 @@ import * as math from "mathjs";
 class App extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
         input: "",
         SimboloMat:"",
@@ -22,8 +26,8 @@ class App extends Component {
     const { input, Donee } = this.state;
 
     function LenghtLimitY() {
-      console.log("funciona")
-      return <Input input={input.substring(0, 5)} />;
+     
+      return <Input input={input.substring(0, 9)} />;
     }
 
     function LenghtLimitN() {
@@ -45,10 +49,10 @@ class App extends Component {
                 <ClearButton handleClear={() => this.setState({ input: "",PrimerIngreso:"",SegundoIngreso:"",SimboloMat:"",result:"" })}>
                   AC
                 </ClearButton>
-                <Button ingresar={()=>this.setState({input: math.evaluate("-1 * " + this.state.input)})}>
+                <Button ingresar={()=>this.setState({input: math.evaluate(`-1 *${parseInt(input, 10)}`)})}>
                   +/-
                 </Button>
-                <Button ingresar={()=>this.setState({SimboloMat: "%",PrimerIngreso:this.state.input /100, Donee:false })}>
+                <Button ingresar={()=>this.setState({SimboloMat: "%",PrimerIngreso:this.state.input /100})}>
                   %
                 </Button>
                 <Button ingresar={()=>this.setState({SimboloMat: "/",PrimerIngreso:this.state.input,input: "", Donee:false})}>
@@ -79,7 +83,7 @@ class App extends Component {
                   <Button ingresar={()=>this.setState({input: this.state.input + 6, Donee:false})}>
                     6
                   </Button>
-                  <Button ingresar={()=>this.setState({SimboloMat: "-",PrimerIngreso:this.state.input,input: ""})}>
+                  <Button ingresar={()=>this.setState({SimboloMat: "-",PrimerIngreso:this.state.input,input: "",Donee:false})}>
                     -
                   </Button>
                 </div>
@@ -104,7 +108,8 @@ class App extends Component {
                   <Button ingresar={()=>this.setState({input: this.state.input + 0, Donee:false})}>
                     0
                   </Button>
-                  <Button ingresar={()=>this.setState({input:math.evaluate(this.state.PrimerIngreso+this.state.SimboloMat+this.state.input)})}>
+                  <Button ingresar={()=>this.setState({
+                    input: math.evaluate(this.state.PrimerIngreso+this.state.SimboloMat+this.state.input).toString().substring(0,9),Donee: true,})}>
                     =
                   </Button>            
                 </div>
