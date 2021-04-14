@@ -1,17 +1,46 @@
-.app {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100%;
-}
 
+.app{
+  width: 400px;
+  height: 680px;
+  background: black;
+  color: white;
+  border-radius: 50px;
+  padding: 20px;
+  justify-content: center;
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  left: 35%;
+  position: relative;
+  align-items: center;
+}
 .calc-wrapper {
   width: 400px;
-  height: 600px;
+  height: 695px;
 }
 
-.row {
+.row1 {
   display: flex;
+  margin-top: 40px;
+  width: 100%;
+}
+.row2 {
+  display: flex;
+  margin-top: 10px;
+  width: 100%;
+}
+.row3 {
+  display: flex;
+  margin-top: 10px;
+  width: 100%;
+}
+.row4 {
+  display: flex;
+  margin-top: 10px;
+  width: 100%;
+}
+.row5 {
+  display: flex;
+  margin-top: 10px;
   width: 100%;
 }

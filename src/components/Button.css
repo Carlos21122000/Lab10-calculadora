@@ -1,17 +1,36 @@
-.btn-case {
-    height: 4em;
-    display: flex;
-    justify-content: center;
+
+.btn-case  {
     align-items: center;
-    font-weight: lighter;
-    font-size: 1.4em;
-    background-color: #e0e1e6;
-    color: #888888;
-    flex: 1;
-    outline: 1px solid #888888;
-}
+    background: #333;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    font-size: 45px;
+    height: 100px;
+    justify-content: center;
+    width: 100px;
+    transition: filter 0.3s ease-in;
+  }
+  
   
 .operador {
     background-color: #fe9241;
     color: #ffffff;
-}
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    font-size: 45px;
+    height: 100px;
+    justify-content: center;
+    width: 100px;
+    transition: filter 0.3s ease-in;
+  }
+  
+  .btn-case.function {
+    color: black;
+    background: #a5a5a5;
+  }
+  
+  .btn-case.operator {
+    background: #f1a33c;
+  }
