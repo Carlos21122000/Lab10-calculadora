@@ -2,6 +2,7 @@
 import React from "react";
 import "./Input.css";
 
+
 class Input extends React.Component {
     render() {
         return (
@@ -11,5 +12,4 @@ class Input extends React.Component {
         );
     }
 };
-
 export default Input;

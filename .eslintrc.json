@@ -22,9 +22,9 @@
         "prettier"
     ],
     "rules": {
-        "no-extra-semi":"off",
+        "no-extra-semi":"error",//regla punto y coma
         "no-unexpected-multiline":"warn",
-        "semi":["error","always"],
+        "semi":["error","always"], //regla punto y coma
         "@typescript-eslint/quotes":["error", "single"],
         "no-console": ["error"],
         "no-unused-vars": ["error"],

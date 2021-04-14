@@ -1,4 +1,3 @@
-  
 import React from "react";
 import "./Button.css";
 
@@ -10,13 +9,11 @@ class Button extends React.Component {
     render() {
         return (
 
-            <div className={`btn-case ${isOperator(this.props.children) ? null : "operador"}`} onClick={() => this.props.handleClick(this.props.children)}
-                onClick={this.props.addVal}
+            <div className={`button ${isOperator(this.props.children) ? null : "opt"}`} onClick={() => this.props.handleClick(this.props.children)}
+                onClick={this.props.ingresar}
             >
                 {this.props.children}
             </div>
-
-
         );
     }
 };
