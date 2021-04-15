@@ -49,7 +49,7 @@ class App extends Component {
                 <ClearButton handleClear={() => this.setState({ input: "",PrimerIngreso:"",SegundoIngreso:"",SimboloMat:"",result:"" })}>
                   AC
                 </ClearButton>
-                <Button ingresar={()=>this.setState({input: math.evaluate(`-1 *${parseInt(input, 10)}`)})}>
+                <Button ingresar={()=>this.setState({input:math.evaluate("-1 * " + this.state.input).toString().substring(0,8)})}>
                   +/-
                 </Button>
                 <Button ingresar={()=>this.setState({SimboloMat: "%",PrimerIngreso:this.state.input /100})}>
